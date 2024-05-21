@@ -38,6 +38,13 @@ class Movie extends Model
             'genre' => 'Comedy',
             'synopsis' => 'Corrupt politicians, frenzied nationalists and other seditious forces continue to jeopardize the thin veneer of peace.'
         ],
+        [
+            'id' => 5,
+            'title' => 'Suzume',
+            'poster'=> 'movie-05.jpg',
+            'genre' => 'Drama',
+            'synopsis' => 'A modern action adventure road story where a 17-year-old girl named Suzume helps a mysterious young man close doors from the other side that are releasing disasters all over in Japan.'
+        ],
     ];
     
     public function getAllMovies()
