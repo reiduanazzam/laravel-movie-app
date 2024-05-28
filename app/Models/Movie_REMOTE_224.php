@@ -9,9 +9,6 @@ class Movie extends Model
 {
     use HasFactory;
 
-<<<<<<< HEAD
-    public function genre()
-=======
     protected $movies = [
         [
             'id' => 1,
@@ -51,8 +48,7 @@ class Movie extends Model
     ];
     
     public function getAllMovies()
->>>>>>> 1750c53fc6ebb4e63e0c22a41513adc11cac6582
     {
-        return $this->belongsTo(Genre::class, 'genre_id');
+        return $this->movies;
     }
 }
