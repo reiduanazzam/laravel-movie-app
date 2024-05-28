@@ -36,5 +36,21 @@ class ReviewSeeder extends Seeder
             'rating' => '7/10',
             'date' => '21/05/2024',
         ]);
+
+        Review::create([
+            'id' => 4,
+            'movie_id' => 4,
+            'user' => 'Fayad',
+            'rating' => '9/10',
+            'date' => '20/03/2024',
+        ]);
+
+        Review::create([
+            'id' => 5,
+            'movie_id' => 5,
+            'user' => 'Topik',
+            'rating' => '8/10',
+            'date' => '29/03/2024',
+        ]);
     }
 }

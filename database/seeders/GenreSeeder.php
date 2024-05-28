@@ -25,7 +25,17 @@ class GenreSeeder extends Seeder
     
         Genre::create([
             'name' => 'School',
-            'description' => ' It focuses on school students and is closely related to other genres such as slice of life, action, comedy, and especially romance.',
+            'description' => 'It focuses on school students and is closely related to other genres such as slice of life, action, comedy, and especially romance.',
+        ]);
+
+        Genre::create([
+            'name' => 'Comedy',
+            'description' => 'Corrupt politicians, frenzied nationalists and other seditious forces continue to jeopardize the thin veneer of peace.',
+        ]);
+
+        Genre::create([
+            'name' => 'Romance',
+            'description' => 'A modern action adventure road story where a 17-year-old girl named Suzume helps a mysterious young man close doors from the other side that are releasing disasters all over in Japan.',
         ]);
     }
 }

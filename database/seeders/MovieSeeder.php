@@ -36,5 +36,21 @@ class MovieSeeder extends Seeder
             'poster' => 'movie-03.jpg',
             'synopsis' => 'Haruka Sakura wants nothing to do with weaklings—hes only interested in the strongest of the strong.',
         ]);
+
+        Movie::create([
+            'id' => 4,
+            'title' => 'Spy X Family',
+            'genre_id' => 4,
+            'poster' => 'movie-04.jpg',
+            'synopsis' => 'Corrupt politicians, frenzied nationalists and other seditious forces continue to jeopardize the thin veneer of peace.',
+        ]);
+
+        Movie::create([
+            'id' => 5,
+            'title' => 'Suzume',
+            'genre_id' => 5,
+            'poster' => 'movie-05.jpg',
+            'synopsis' => 'A modern action adventure road story where a 17-year-old girl named Suzume helps a mysterious young man close doors from the other side that are releasing disasters all over in Japan.',
+        ]);
     }
 }
