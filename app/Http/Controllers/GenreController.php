@@ -7,12 +7,10 @@ use Illuminate\Http\Request;
 
 class GenreController extends Controller
 {
-    // Metode untuk menampilkan semua genre
-    public function genre()
+    public function index()
     {
-        $genreModel = new Genre();
-        $genres = $genreModel->getAllGenre();
+        $genres = Genre::all();
 
-        return view('genre', ['genres' => $genres]);
+        return view('genre', compact('genres'));
     }
 }

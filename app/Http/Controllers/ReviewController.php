@@ -7,12 +7,10 @@ use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
-   
     public function index()
     {
-        $reviewModel = new Review();
-        $reviews = $reviewModel->getAllReview();
-
-        return view ('review', ['reviews' => $reviews]);
+        
+        $reviews = Review::all();
+        return view('review', compact('reviews'));
     }
 }
