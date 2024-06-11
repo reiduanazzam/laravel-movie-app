@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Models\Genre;
 use App\Models\Movie;
@@ -10,11 +9,8 @@ class MovieController extends Controller
     public function index()
     {
         $movies = Movie::all();
-
         return view('movies.index', compact('movies'));
     }
-
-
 
     public function create()
 {
@@ -37,10 +33,30 @@ public function store(Request $request)
 }
 
 
+public function edit(Movie $movie)
+{
+    $genres = Genre::all();
+    return view('movies.edit', compact('movie', 'genres'));
+}
+
+
+public function update(Request $request, Movie $movie)
+{
+    $validatedData = $request->validate([
+        'title' => 'required',
+        'genre_id' => 'required',
+        'poster' => 'required',
+        'synopsis' => 'required',
+    ]);
+
+    $movie->update($validatedData);
+
+    return redirect('/movies')->with('success', 'Movie updated successfully!');
+}
+
 public function destroy(Movie $movie)
 {
     $movie->delete();
     return redirect('/movies')->with('success', 'Movie deleted successfully!');
 }
-
 }
